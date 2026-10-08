@@ -1,0 +1,2 @@
+/* Align the coverage notice icon, sentence and link without changing the section. */
+.coverage-note{display:flex;align-items:center;flex-wrap:nowrap;gap:12px;font-size:16px;line-height:1.65}.coverage-note>svg{width:22px;height:22px;flex:0 0 22px}.coverage-note-copy{display:flex;align-items:center;flex-wrap:wrap;gap:4px 12px;min-width:0}.coverage-note-copy>span,.coverage-note-copy>a{font-size:16px;line-height:1.65}.coverage-note-copy>a{min-height:44px;display:inline-flex;align-items:center}

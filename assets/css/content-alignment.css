@@ -1,0 +1,180 @@
+/* Shared content alignment: natural height on stacked rows. */
+.service-grid,.steps,.industries,.testimonial-grid,.zone-grid,.impact-grid,
+.values-grid,.courier-grid,.safety-grid,.community-grid,.delivery-grid,
+.blog-grid,.topic-grid,.rate-grid,.business-rate-grid,.price-factor-grid,
+.pricing-grid,.cargo-cards,.contact-card-grid,.planning-grid,.dashboard-metrics{
+  align-items:stretch;grid-auto-rows:auto;
+}
+.service-card,.industries>article,.testimonial-grid>figure,.zone-grid>article,
+.safety-grid>article,.courier-copy,.contact-card-grid>article{
+  display:flex;flex-direction:column;min-width:0;
+}
+.courier-copy{flex:1}
+.service-card>.text-link,.service-card>.button,.industries>article>.text-link,
+.testimonial-grid>figure>figcaption,.contact-card-grid>article>.text-link{margin-top:auto;align-self:flex-start}
+main :is(h2,h3,h4,p,blockquote){overflow-wrap:break-word}
+main :is(.blog-card-body,.delivery-card-body,.courier-copy)>:is(h3,p){text-align:start}
+main :is(.service-card,.delivery-card,.blog-card,.community-grid article) h3{min-height:0}
+.footer-grid{align-items:start}
+.footer-grid h2{line-height:1.5}
+@media(min-width:640px){
+ .city-section,.about-story,.industry-layout,.featured-article,.contact-location{align-items:stretch}
+ .section-heading{align-items:flex-start}
+}
+.blog-photo,.service-photo,.courier-photo{flex-shrink:0}
+.service-card>.icon-box,.delivery-card-body>svg,.safety-grid>article>svg,.industries>article>svg{flex-shrink:0}
+
+/* Screenshot corrections: Services, Pricing and About only. */
+.services-page .service-intro,
+.pricing-page .pricing-intro{padding-block:32px;align-items:center;gap:28px}
+.services-page .service-intro h2,
+.pricing-page .pricing-intro h2{margin-bottom:0}
+.services-page .service-intro>div>p:last-child,
+.pricing-page .pricing-intro>div>p:last-child{margin-bottom:0}
+.services-page .services-catalog>.section-heading,
+.pricing-page .rates-section>.section-heading{align-items:center;margin-bottom:24px;gap:24px}
+.services-page .services-catalog>.section-heading>p,
+.pricing-page .rates-section>.section-heading>p{padding-top:0;margin-bottom:0}
+.about-page .about-story{padding-block:40px;align-items:center;gap:32px}
+.about-page .about-story p:last-child{margin-bottom:0}
+.about-page .about-story-image{min-height:0;aspect-ratio:3/2;align-self:center;background-size:contain!important;background-repeat:no-repeat!important;background-position:center!important}
+.about-page .about-values{padding-block:36px}
+.about-page .about-bicycle{padding-block:32px;gap:32px;align-items:center}
+.about-page .bicycle-benefits article{padding-block:18px}
+.about-page .about-bicycle>div>.button{margin-top:0}
+@media(min-width:640px) and (max-width:1024px){
+  .pricing-page .rate-card{text-align:center;align-items:center;padding:24px}
+  .pricing-page .rate-card>svg{align-self:center;margin-bottom:16px}
+  .pricing-page .rate-card>h3{min-height:0;margin-bottom:16px}
+  .pricing-page .rate-card>p{width:100%;margin-bottom:16px}
+  .pricing-page .rate-card>ul{width:100%;max-width:660px;text-align:start;margin:0 auto 16px;gap:8px 24px}
+  .pricing-page .rate-card .rate-limit{padding-top:16px;margin-bottom:16px}
+  .pricing-page .rate-card>.button{width:100%;margin-top:0}
+  .about-page .about-story{gap:24px;padding-block:32px}
+  .about-page .about-bicycle{gap:24px;padding-block:28px}
+}
+@media(max-width:639px){
+  .services-page .service-intro,.pricing-page .pricing-intro{padding-block:28px;gap:20px}
+  .services-page .services-catalog>.section-heading,.pricing-page .rates-section>.section-heading{align-items:flex-start;gap:16px}
+  .about-page .about-story,.about-page .about-bicycle{padding-block:28px;gap:24px}
+  .about-page .about-values{padding-block:28px}
+}
+
+/* Requested About and Contact column corrections. */
+@media(min-width:640px){
+ .about-page .about-story{align-items:stretch}
+ .about-page .about-story-image{aspect-ratio:auto;align-self:stretch;min-height:0;background-size:cover!important;background-position:20% center!important}
+ .about-page .about-story>div:first-child{display:flex;flex-direction:column;justify-content:center}
+ .about-page .about-bicycle,.about-page .about-milestones{align-items:stretch}
+ .about-page .about-bicycle>div:first-child,.about-page .about-milestones>div:first-child{display:flex;flex-direction:column}
+ .about-page .about-bicycle>div:first-child>.button{margin-top:auto;align-self:flex-start}
+ .about-page .about-milestones>div:first-child>p:last-child{margin-top:auto;margin-bottom:0}
+ .about-page .about-milestones ol{display:flex;flex-direction:column;justify-content:space-between}
+ .contact-page .contact-faq{align-items:stretch;gap:32px;padding-block:36px}
+ .contact-page .contact-faq>div:first-child{display:flex;flex-direction:column}
+ .contact-page .contact-faq>div:first-child>.text-link{margin-top:auto;align-self:flex-start}
+ .contact-page .contact-office,.contact-page .contact-hours{display:flex;flex-direction:column;min-width:0}
+ .contact-page .contact-office>p:last-child,.contact-page .contact-hours>p:last-child{margin-top:auto;margin-bottom:0;padding-top:12px}
+ .contact-page .contact-office h3,.contact-page .contact-hours h3{line-height:1.3;min-height:2.6em;margin-bottom:16px}
+ .contact-page .contact-hours dl{margin-top:0}
+}
+@media(min-width:640px) and (max-width:1024px){
+ .about-page .about-bicycle{align-items:stretch;padding-block:24px;gap:24px}
+ .about-page .bicycle-benefits article{padding-block:14px}
+ .about-page .about-bicycle h2{font-size:clamp(28px,3.4vw,36px);margin-bottom:16px}
+ .about-page .about-bicycle>div:first-child>p:not(.eyebrow){margin-bottom:18px}
+ .about-page .about-milestones{gap:24px;padding-bottom:32px}
+ .about-page .about-milestones li{padding-block:18px;gap:16px}
+ .contact-page .contact-office,.contact-page .contact-hours{padding-top:20px;margin-top:20px}
+ .contact-page .contact-hours dl>div{gap:12px}
+}
+.contact-page .contact-location{display:block;padding-block:32px}
+.contact-page .contact-location>h2{margin-bottom:20px}
+.contact-page .contact-map iframe{display:block;width:100%;height:420px;border:0}
+.contact-page .contact-map .map-caption{padding:18px 24px}
+@media(max-width:1024px){.contact-page .contact-map iframe{height:360px}}
+@media(max-width:639px){
+ .about-page .about-story-image{aspect-ratio:3/2;background-size:contain!important;background-position:center!important}
+ .contact-page .contact-map iframe{height:300px}
+ .contact-page .contact-faq{padding-block:28px;gap:20px}
+}
+
+/* Independent Home 2 image; replace this JPG without affecting Home 1. */
+html .home-two .industry-image{background-image:url('../images/home-2-industry.jpg')!important}
+:is(.hero-photo,.city-photo,.industry-image,.about-story-image,.courier-photo,.service-photo,.blog-photo,.featured-photo,.service-card,.delivery-card,.blog-card,.courier-card,.rate-card,.neighborhood-card,.active-delivery-card,.values-grid>article,.safety-grid>article,.community-grid>article,.cargo-cards>article,.pricing-grid>article,.topic-grid>article,.contact-card-grid>article,.testimonial-grid>figure,.industries>article){transition:transform .35s ease,border-color .35s ease;transform-origin:center}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ :is(.hero-photo,.city-photo,.industry-image,.about-story-image,.featured-photo):hover{transform:translateY(-4px) scale(1.012)}
+ :is(.service-card,.delivery-card,.blog-card,.courier-card,.rate-card,.neighborhood-card,.active-delivery-card,.values-grid>article,.safety-grid>article,.community-grid>article,.cargo-cards>article,.pricing-grid>article,.topic-grid>article,.contact-card-grid>article,.testimonial-grid>figure,.industries>article):hover{transform:translateY(-6px);border-color:var(--primary)}
+ :is(.delivery-card,.blog-card,.courier-card){overflow:hidden}
+ .delivery-card:hover .service-photo,.blog-card:hover .blog-photo,.courier-card:hover .courier-photo{transform:scale(1.035)}
+}
+@media(prefers-reduced-motion:no-preference){
+ .box-motion-enter{animation:verdant-box-enter .65s cubic-bezier(.2,.7,.2,1) both}
+ @keyframes verdant-box-enter{from{translate:0 18px}to{translate:0 0}}
+}
+@media(prefers-reduced-motion:reduce){.box-motion-enter{animation:none}main :is(.hero-photo,.city-photo,.industry-image,.about-story-image,.courier-photo,.service-photo,.blog-photo,.featured-photo,.service-card,.delivery-card,.blog-card,.courier-card,.rate-card,.neighborhood-card){transition:none}}
+
+/* Website-wide motion and text-card interaction. */
+:is(.service-card,.delivery-card,.blog-card,.courier-card,.rate-card,.neighborhood-card,.active-delivery-card,.values-grid>article,.safety-grid>article,.community-grid>article,.cargo-cards>article,.pricing-grid>article,.topic-grid>article,.contact-card-grid>article,.testimonial-grid>figure,.industries>article,.benefits>article,.steps>article,.steps>li,.zone-grid>article,.impact-grid>article,.planning-grid>article,.price-factor-grid>article,.dashboard-metrics>article,.business-benefit-bar>article,.bicycle-benefits>article,.parcel-rules>article,.coverage-business-cards>article,.numbered-benefits>article,.service-workflow li,.route-story li,.about-milestones li,.column-guidance article,.industry-rows article,.dashboard-box,.contact-office,.contact-hours){transition:transform .3s ease,border-color .3s ease}
+main :is(.text-link,.button),.site-header nav a,.footer-grid a{transition:transform .25s ease,color .25s ease,border-color .25s ease}
+main :is(.faq-list,.service-faq,.contact-faq) summary{transition:color .25s ease,padding-inline-start .25s ease}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ :is(.service-card,.delivery-card,.blog-card,.courier-card,.rate-card,.neighborhood-card,.active-delivery-card,.values-grid>article,.safety-grid>article,.community-grid>article,.cargo-cards>article,.pricing-grid>article,.topic-grid>article,.contact-card-grid>article,.testimonial-grid>figure,.industries>article,.benefits>article,.steps>article,.steps>li,.zone-grid>article,.impact-grid>article,.planning-grid>article,.price-factor-grid>article,.dashboard-metrics>article,.business-benefit-bar>article,.bicycle-benefits>article,.parcel-rules>article,.coverage-business-cards>article,.numbered-benefits>article,.service-workflow li,.route-story li,.about-milestones li,.column-guidance article,.industry-rows article,.dashboard-box,.contact-office,.contact-hours):hover{transform:translateY(-5px);border-color:var(--primary)}
+ :is(.service-card,.delivery-card,.blog-card,.courier-card,.rate-card,.neighborhood-card,.active-delivery-card,.values-grid>article,.safety-grid>article,.community-grid>article,.cargo-cards>article,.pricing-grid>article,.topic-grid>article,.contact-card-grid>article,.testimonial-grid>figure,.industries>article,.benefits>article,.steps>article,.steps>li,.zone-grid>article,.impact-grid>article,.planning-grid>article,.price-factor-grid>article,.dashboard-metrics>article,.business-benefit-bar>article,.bicycle-benefits>article,.parcel-rules>article,.coverage-business-cards>article,.numbered-benefits>article,.service-workflow li,.route-story li,.about-milestones li,.column-guidance article,.industry-rows article,.dashboard-box,.contact-office,.contact-hours):hover>h3{color:var(--primary)}
+ main .text-link:hover,.footer-grid a:hover{transform:translateY(-2px)}
+ main :is(.faq-list,.service-faq,.contact-faq) summary:hover{color:var(--primary);padding-inline-start:6px}
+}
+:is(.service-card,.delivery-card,.blog-card,.courier-card,.rate-card,.neighborhood-card,.active-delivery-card,.values-grid>article,.safety-grid>article,.community-grid>article,.cargo-cards>article,.pricing-grid>article,.topic-grid>article,.contact-card-grid>article,.testimonial-grid>figure,.industries>article,.benefits>article,.steps>article,.steps>li,.zone-grid>article,.impact-grid>article,.planning-grid>article,.price-factor-grid>article,.dashboard-metrics>article,.business-benefit-bar>article,.bicycle-benefits>article,.parcel-rules>article,.coverage-business-cards>article,.numbered-benefits>article,.service-workflow li,.route-story li,.about-milestones li,.column-guidance article,.industry-rows article,.dashboard-box,.contact-office,.contact-hours)>h3{transition:color .25s ease}
+@media(prefers-reduced-motion:reduce){
+ :is(.service-card,.delivery-card,.blog-card,.courier-card,.rate-card,.neighborhood-card,.active-delivery-card,.values-grid>article,.safety-grid>article,.community-grid>article,.cargo-cards>article,.pricing-grid>article,.topic-grid>article,.contact-card-grid>article,.testimonial-grid>figure,.industries>article,.benefits>article,.steps>article,.steps>li,.zone-grid>article,.impact-grid>article,.planning-grid>article,.price-factor-grid>article,.dashboard-metrics>article,.business-benefit-bar>article,.bicycle-benefits>article,.parcel-rules>article,.coverage-business-cards>article,.numbered-benefits>article,.service-workflow li,.route-story li,.about-milestones li,.column-guidance article,.industry-rows article,.dashboard-box,.contact-office,.contact-hours),main :is(.text-link,.button),.site-header nav a,.footer-grid a,main summary{transition:none!important;animation:none!important;transform:none!important}
+}
+
+/* Testimonial photos and compact, aligned footer columns. */
+.testimonial-grid .profile-avatar{display:block;width:52px;height:52px;flex:0 0 52px;border-radius:50%;overflow:hidden;border:1px solid var(--primary)}
+.testimonial-grid .profile-avatar img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--portrait-position,center)}
+.testimonial-grid figcaption{align-items:center;gap:14px;width:100%}
+.testimonial-grid figcaption>div{min-width:0}
+footer.page-pad{padding-top:32px}
+footer .footer-grid{align-items:stretch;gap:24px 28px}
+footer .footer-grid>div{display:flex;flex-direction:column;min-width:0}
+footer .footer-grid h2,footer .footer-grid .brand{min-height:42px;display:flex;align-items:center;margin-bottom:12px;flex-shrink:0}
+footer .footer-grid h2{line-height:1.4}
+footer .footer-grid p{margin-bottom:12px;line-height:1.6}
+footer .footer-grid>div>a:not(.brand){display:flex;align-items:center;min-height:44px;line-height:1.5}
+footer .footer-grid>div>.text-link{align-self:flex-start;margin-top:0}
+footer .footer-grid .newsletter-input{margin-top:0}
+footer .footer-grid .newsletter form>p{margin-top:10px;margin-bottom:0}
+footer .footer-grid .small-copy{line-height:1.6}
+footer .footer-bottom{margin-top:24px;padding-block:16px;gap:14px;align-items:center}
+@media(max-width:1024px){footer .footer-grid{gap:24px}}
+@media(max-width:639px){
+ footer.page-pad{padding-top:28px}
+ footer .footer-grid{gap:20px}
+ footer .footer-grid h2,footer .footer-grid .brand{margin-bottom:8px}
+ footer .footer-bottom{margin-top:20px;align-items:flex-start}
+}
+
+/* Separate CTA decoration from text and controls at every screen size. */
+.final-cta .cta-bike{position:static;inset:auto;width:112px;height:112px;display:block;margin:24px auto 0;pointer-events:none;opacity:1;flex-shrink:0}
+@media(min-width:1100px){
+ .final-cta:has(.cta-bike){display:grid;grid-template-columns:minmax(0,1fr) 200px;gap:16px 32px;align-items:center}
+ .final-cta>:not(.cta-bike){grid-column:1;margin-block:0}
+ .final-cta>.cta-bike{grid-column:2;grid-row:1/span 4;width:180px;height:180px;margin:0;align-self:center;justify-self:center}
+ .final-cta>.button-group{margin-top:8px}
+}
+@media(max-width:639px){.final-cta .cta-bike{width:88px;height:88px;margin-top:20px}}
+/* Real delivery photography replaces the visible route illustration. */
+.map-preview .tracking-delivery-photo{display:block;width:100%;height:280px;object-fit:cover;object-position:center}
+.map-preview>svg[hidden]{display:none!important}
+.home-two .map-preview{overflow:hidden}
+.home-two .map-preview .tracking-delivery-photo{height:100%;min-height:280px}
+.map-preview .map-label{pointer-events:none}
+@media(max-width:639px){.map-preview .tracking-delivery-photo,.home-two .map-preview .tracking-delivery-photo{height:230px;min-height:0}}
+
+/* Real, interactive geographic maps in both homepage tracking panels. */
+.map-preview{overflow:hidden;min-height:320px}
+.map-preview>.tracking-location-map{display:block;width:100%;height:340px;border:0}
+.home-two .map-preview>.tracking-location-map{height:100%;min-height:340px;align-self:stretch}
+.map-preview>.map-label{display:none}
+@media(max-width:1024px){.map-preview>.tracking-location-map{height:320px}.home-two .map-preview>.tracking-location-map{height:320px;min-height:320px}}
+@media(max-width:639px){.map-preview{min-height:280px}.map-preview>.tracking-location-map,.home-two .map-preview>.tracking-location-map{height:280px;min-height:280px}}

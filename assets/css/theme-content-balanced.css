@@ -1,0 +1,65 @@
+:root{--primary:#527f5b;--secondary:var(--primary);--accent:var(--primary);--background:#ffffff;--surface:#ffffff;--surface-soft:#ffffff;--text:#000000;--muted:#000000;--border:#000000;--success:var(--primary);--warning:var(--primary);--error:var(--primary);--map-bg:#ffffff;--map-street:#000000;--map-park:#527f5b;color-scheme:light}
+html[data-theme="dark"]{--primary:#527f5b;--background:#000000;--surface:#000000;--surface-soft:#000000;--text:#ffffff;--muted:#ffffff;--border:#ffffff;--map-bg:#000000;--map-street:#ffffff;--map-park:#527f5b;color-scheme:dark}
+
+/* Three-color theme contract: black, white and the original natural green. */
+html,body,main,.site-header,footer{background:var(--background);color:var(--text)}
+.button-primary,.button-primary:hover,.button-light,.button-light:hover{background:var(--primary);border-color:var(--primary);color:#ffffff}
+.announcement,.final-cta{background:var(--primary);color:#ffffff}
+.final-cta h2,.final-cta p,.final-cta .eyebrow{color:#ffffff}
+.final-cta .button-primary{background:#ffffff;color:var(--primary);border-color:#ffffff}
+.final-cta .button-outline{color:#ffffff;border-color:#ffffff}
+.replace-image-note,.photo-label,.image-chip,.hero-photo-note,.courier-photo>span{background:var(--surface);color:var(--text);border:1px solid var(--border)}
+.photo-label strong,.photo-label span{color:var(--text)}
+.hero-photo,.city-photo,.industry-image,.about-story-image,.courier-photo{background-color:var(--surface-soft);border:1px solid var(--border)}
+.b2b-hero,.about-hero{background-image:linear-gradient(#000000,#000000),var(--hero-image);background-color:#000000;color:#ffffff}
+.b2b-hero{--hero-image:url('../images/business-hero.jpg')}
+.about-hero{--hero-image:url('../images/about-hero.jpg')}
+html[dir="rtl"] .b2b-hero,html[dir="rtl"] .about-hero{background-image:linear-gradient(#000000,#000000),var(--hero-image)}
+.b2b-overlay h1,.b2b-overlay>p,.b2b-overlay .eyebrow,.b2b-hero-bottom,.about-hero h1,.about-hero>p,.about-hero .eyebrow,.hero-demo-label{color:#ffffff}
+html[data-theme="dark"] .b2b-hero,html[data-theme="dark"] .about-hero{background-image:linear-gradient(#000000,#000000),var(--hero-image)}
+.button-on-dark{background:transparent;color:#ffffff;border-color:#ffffff}
+.button-on-dark:hover{background:#ffffff;color:#000000;border-color:#ffffff}
+html[data-theme="dark"] .brand,html[data-theme="dark"] .eyebrow,html[data-theme="dark"] .text-link,html[data-theme="dark"] nav .active,html[data-theme="dark"] .nav-dropdown.is-active>summary,html[data-theme="dark"] .price,html[data-theme="dark"] .b2b-editorial em{color:#ffffff}
+:focus-visible{outline:3px solid var(--text);outline-offset:4px}
+
+/* JPG integration remains replaceable in both themes. */
+:root{--placeholder-shade:#ffffff}
+html[data-theme="dark"]{--placeholder-shade:#000000}
+.hero-photo{background-image:url('../images/hero-courier.jpg')}
+.city-photo,.industry-image{background-image:url('../images/business-handoff.jpg')}
+.about-story-image{background-image:url('../images/about-story.jpg')}
+.courier-photo{background-image:var(--courier-image)}
+html[data-theme="dark"] .route-story li>span,html[data-theme="dark"] .numbered-benefits article>span{color:#ffffff}
+
+/* Focused review: centered CTAs and readable natural green in dark mode. */
+.final-cta{text-align:center}
+.final-cta>p,.final-cta>h2{margin-inline:auto;max-width:900px;position:relative;z-index:1}
+.final-cta .button-group{justify-content:center;align-items:center;flex-direction:row}
+.final-cta .button-light{background:#ffffff;color:#527f5b;border-color:#ffffff}
+html[data-theme="dark"]{--primary:#527f5b;--map-park:#527f5b}
+html[data-theme="dark"] .brand,html[data-theme="dark"] .eyebrow,html[data-theme="dark"] .text-link,html[data-theme="dark"] nav .active,html[data-theme="dark"] .home-menu-label.active,html[data-theme="dark"] .price,html[data-theme="dark"] .b2b-editorial em,html[data-theme="dark"] .route-story li>span,html[data-theme="dark"] .numbered-benefits article>span{color:var(--primary)}
+html[data-theme="dark"] .button-primary,html[data-theme="dark"] .button-light{background:var(--primary);border-color:var(--primary);color:#000000}
+html[data-theme="dark"] .announcement,html[data-theme="dark"] .final-cta{background:var(--primary);color:#000000}
+html[data-theme="dark"] .final-cta h2,html[data-theme="dark"] .final-cta p,html[data-theme="dark"] .final-cta .eyebrow{color:#000000}
+html[data-theme="dark"] .final-cta .button-light{background:#000000;color:var(--primary);border-color:#000000}
+html[data-theme="dark"] .final-cta .button-on-dark{color:#000000;border-color:#000000}
+@media(max-width:639px){.final-cta .button-group{flex-direction:column;align-items:center}.final-cta>p{max-width:100%}}
+
+/* Exact shared palette: no alternate primary tint or colored shadows. */
+html[data-theme="dark"]{--primary:#527f5b}
+html[data-theme="dark"] .announcement,html[data-theme="dark"] .final-cta{color:#000000}
+.button:hover{box-shadow:none}
+.cta-bike{opacity:1;color:#ffffff}
+html[data-theme="dark"] .cta-bike{color:#000000}
+input,select,textarea{accent-color:var(--primary)}
+
+/* Hover contrast fix: foreground, icon and border always follow the surface. */
+.button-on-dark:hover,.button-on-dark:focus-visible{background:#ffffff;color:#000000;border-color:#ffffff}
+html[data-theme="dark"] .final-cta .button-on-dark:hover,html[data-theme="dark"] .final-cta .button-on-dark:focus-visible{background:#000000;color:#ffffff;border-color:#000000}
+.final-cta .button-light:hover,.final-cta .button-light:focus-visible{background:#000000;color:#ffffff;border-color:#000000}
+html[data-theme="dark"] .final-cta .button-light:hover,html[data-theme="dark"] .final-cta .button-light:focus-visible{background:#ffffff;color:#000000;border-color:#ffffff}
+.button svg{color:currentColor}
+
+/* Relevant guidance fills shorter columns without artificial fixed heights. */
+.column-guidance{margin-top:24px;border-top:1px solid var(--border);padding-top:24px}.column-guidance h3{font-size:22px;line-height:1.3;margin-bottom:20px}.column-guidance article{margin-bottom:20px}.column-guidance article:last-child{margin-bottom:0}.column-guidance h4{font-size:18px;line-height:1.4;font-weight:600;letter-spacing:-.02em;margin:0 0 8px;color:var(--text)}.column-guidance p{font-size:16px;line-height:1.65;margin:0}.coverage-request-section,.detail-overview,.about-safety{align-items:stretch}.coverage-request-section>div:first-child{display:flex;flex-direction:column}.coverage-request-section>div:first-child>.column-guidance{margin-top:auto;padding-top:24px}.column-guidance .text-link{align-self:flex-start}
+@media(max-width:1024px){.coverage-request-section>div:first-child>.column-guidance{margin-top:24px}}

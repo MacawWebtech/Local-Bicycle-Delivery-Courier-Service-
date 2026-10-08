@@ -1,0 +1,24 @@
+/* Image visibility fix: keep every existing image box visible without changing layout/content. */
+.hero-photo{background-image:url('../images/hero-courier.jpg')!important;background-size:cover!important;background-position:61% center!important}
+.city-photo,.industry-image{background-image:url('../images/business-handoff.jpg')!important;background-size:cover!important;background-position:center!important}
+.about-story-image{background-image:url('../images/about-story.jpg')!important;background-size:cover!important;background-position:center!important}
+.courier-photo{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
+.service-photo{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
+.blog-photo{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
+.featured-photo{background-image:url('../images/blog-small-journeys.jpg')!important;background-size:cover!important;background-position:center!important}
+
+/* Existing heading/hero images remain visible; overlays are reduced instead of covering the photo. */
+.services-hero::before,.detail-hero::before,.b2b-hero::before,.about-hero::before{background:#000!important;opacity:.28!important;pointer-events:none!important}
+html .b2b-hero,html[data-theme] .b2b-hero,html[dir] .b2b-hero{background-image:url('../images/business-hero.jpg')!important;background-size:cover!important;background-position:center!important}
+html .about-hero,html[data-theme] .about-hero,html[dir] .about-hero{background-image:url('../images/about-hero.jpg')!important;background-size:cover!important;background-position:center!important}
+
+/* Do not let theme/hover states hide uploaded/replaced images. */
+html[data-theme="dark"] .hero-photo{background-image:url('../images/hero-courier.jpg')!important}
+html[data-theme="dark"] .city-photo,html[data-theme="dark"] .industry-image{background-image:url('../images/business-handoff.jpg')!important}
+html[data-theme="dark"] .about-story-image{background-image:url('../images/about-story.jpg')!important}
+html[data-theme="dark"] .courier-photo{background-size:cover!important}
+html[data-theme="dark"] .service-photo{background-size:cover!important}
+html[data-theme="dark"] .blog-photo{background-size:cover!important}
+
+/* Native image elements must render normally in every image box. */
+img,.article-featured-image{opacity:1!important;visibility:visible!important;filter:none!important}

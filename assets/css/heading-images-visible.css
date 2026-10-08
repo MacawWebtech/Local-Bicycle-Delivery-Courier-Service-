@@ -1,0 +1,5 @@
+/* Heading photo visibility: retain a translucent black layer for white text. */
+html .b2b-hero,html .about-hero,html[data-theme] .b2b-hero,html[data-theme] .about-hero,html[dir] .b2b-hero,html[dir] .about-hero{background-image:var(--hero-image);background-position:center;background-size:cover}
+.b2b-hero::before,.about-hero::before,.services-hero::before{content:"";position:absolute;inset:0;background:#000000;opacity:.55;pointer-events:none}
+.about-hero>*{position:relative;z-index:1}.b2b-overlay,.b2b-hero-bottom{z-index:1}
+.article-hero{background-image:url('../images/blog-details-hero.jpg')}

@@ -1,0 +1,4 @@
+/* Targeted corrections for the three reviewed sections. */
+@media(min-width:640px){.home-two .b2b-faq{align-items:stretch}.home-two .b2b-faq>.faq-list{display:grid;grid-template-rows:repeat(5,minmax(76px,1fr));align-self:stretch}.home-two .b2b-faq>.faq-list details{display:flex;flex-direction:column;justify-content:center}.home-two .b2b-faq>.faq-list summary{display:list-item;padding-block:20px;min-height:76px;align-content:center}.home-two .b2b-faq>.faq-list details[open]{justify-content:flex-start}.home-two .b2b-faq>div:first-child>.text-link{margin-top:auto;align-self:flex-start}}
+.parcel-preparation{margin-block:24px}.parcel-preparation h3{font-size:22px;margin-bottom:12px}.parcel-preparation p{font-size:16px;line-height:1.65;margin-bottom:16px}.about-milestones>div>p{font-size:16px;line-height:1.65;margin-bottom:16px}
+@media(max-width:639px){.parcel-preparation{margin-block:20px}.home-two .b2b-faq>.faq-list{display:block}}

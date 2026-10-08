@@ -1,0 +1,2 @@
+/* Logical properties in the core stylesheet perform most mirroring. */
+[dir="rtl"]{text-align:right}[dir="rtl"] .text-link svg,[dir="rtl"] .button svg[data-lucide="arrow-right"],[dir="rtl"] .button svg[data-lucide="arrow-up-right"]{transform:scaleX(-1)}[dir="rtl"] .hero-photo{background-position:61% center}[dir="rtl"] .map-preview>svg{transform:scaleX(-1)}[dir="rtl"] input[type="email"]{direction:ltr;text-align:right}[dir="rtl"] .brand{direction:ltr}[dir="rtl"] .tracking-stages{direction:rtl}
